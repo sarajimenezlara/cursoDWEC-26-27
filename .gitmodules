@@ -1,0 +1,3 @@
+[submodule "entorno-nvim"]
+	path = entorno-nvim
+	url = git@github.com:isaiasfl/entorno-nvim.git
