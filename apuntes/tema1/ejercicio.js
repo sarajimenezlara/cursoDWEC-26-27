@@ -34,8 +34,8 @@ edad > 18 ? console.log("Eres mayor de edad") : console.log("Eres menor de edad"
 //Dada la edad los minutos y los segundos. Comprobar, primero, si la edad es un numero positivo y mayor que 18, segundo, comprobar si la hora y los minutos son validos de mi sistema de numeracion
 //
 let edad = 16
-edad > 0 && <= 18 ? console.log("Eres mayor de edad"): console.log("Eres menor de edad")
+edad > 0 && edad >=18 ? console.log("Eres mayor de edad"): console.log("Eres menor de edad")
 let hora = 12 
 let minutos =34
-hora < 24 && >= 0 ? console.log("La hora esta correcta"): console-log("La hora esta incorrecta")
-minutos <= 60 && >= 0 ? console.log("Los minutos estan correctos"): console.log("Los minutos estan incorrectos") 
+hora < 24 && hora >=0 ? console.log("La hora esta correcta"): console.log("La hora esta incorrecta")
+minutos <= 60 && hora >= 0 ? console.log("Los minutos estan correctos"): console.log("Los minutos estan incorrectos") 
