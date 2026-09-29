@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lanzar-relacion": "vite"
   },
   "devDependencies": {
     "typescript": "~6.0.2",

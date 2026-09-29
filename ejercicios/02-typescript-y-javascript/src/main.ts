@@ -1,35 +1,28 @@
-import './style.css'
+import { ejercicio01 } from './ej_01'
+import { ejercicio02 } from './ej_02'
+import { ejercicio03 } from './ej_03'
+import { ejercicio04 } from './ej_04'
+import { ejercicio05 } from './ej_05'
+import { ejercicio06 } from './ej_06'
+import { ejercicio07 } from './ej_07'
+import { ejercicio08 } from './ej_08'
+import { ejercicio09 } from './ej_09'
+import { ejercicio10 } from './ej_10'
 
-const profesor = 'Isaías FL'
-const modulo = 'DWEC'
+const ejercicios: Array<() => void> = [
+  ejercicio01,
+  ejercicio02,
+  ejercicio03,
+  ejercicio04,
+  ejercicio05,
+  ejercicio06,
+  ejercicio07,
+  ejercicio08,
+  ejercicio09,
+  ejercicio10
+]
 
-console.log(profesor)
-console.log('Profesor:', profesor)
-console.log({ profesor, modulo })
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <h1>Hola TypeScript</h1>
-`
-console.log(typeof 7)//dira que es tipo number
-console.log(typeof '7')//dira que es tipo string
-console.log(typeof null)//dira que es null
-console.log('7' + 2)//dira 72
-console.log('7' - 2)//dara error ya que  si el + los junta el menos 
-//los separaria y eso no se puede asi que da una advertencia
-console.log(10 % 3)//divide
-console.log(Number(''))//mostrara 0
-console.log(Number('14px'))// pondra 14px en number
-
-const nombre ='Sara'
-const edad = '18'
-const grupo = '2º DAW'
-const haProgramadoAntes=true
-
-console.log(`Hola soy ${nombre}, tengo ${edad} años, estoy en ${grupo} y he programado antes: ${haProgramadoAntes}`)
- console.log(typeof nombre)
- console.log(typeof edad)
- console.log(typeof grupo)
- console.log(typeof haProgramadoAntes)
-
-
-
+for (let i = 0; i < ejercicios.length; i++) {
+  console.log(`\n===== Ejercicio ${i + 1} =====`)
+  ejercicios[i]()
+}
