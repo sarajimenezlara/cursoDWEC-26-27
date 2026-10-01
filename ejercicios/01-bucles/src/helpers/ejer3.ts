@@ -20,11 +20,11 @@ notas: number[];
 //-------declaracion de variables-------------
 const alumnado: Alumno[]=[
     {nombre: "Luis", edad: 22, notas: [5,4,6,3]},
-    {nombre: "Caudia", edad: 19, notas [9,2,7,5]},
-    {nombre: "Daniel", edad: 23, notas [9,6,7,5]},
-    {nombre: "Fran", edad: 17, notas [1,9,3,2]},
-  {nombre: "Elisa", edad: 20, notas [4,7,9,6]},
-  {nombre: "Ramon", edad: 25, notas [9,8,6,9]},
+    {nombre: "Caudia", edad: 19, notas :[9,2,7,5]},
+    {nombre: "Daniel", edad: 23, notas :[9,6,7,5]},
+    {nombre: "Fran", edad: 17, notas :[1,9,3,2]},
+  {nombre: "Elisa", edad: 20, notas: [4,7,9,6]},
+  {nombre: "Ramon", edad: 25, notas: [9,8,6,9]},
 ]
 
 //Obten los nombres de los alumnos (solo los nombres)
@@ -45,7 +45,7 @@ const obtenerMedias=(alumnado:Alumno[]):number[]=>{
   }
   return medias
 }
-//Obtener el alumno con mejor media
+//obtener el alumno con mejor media
 const obtenerMejorAlumno=(alumnado:Alumno[]):string=>{
   let mediaAlta = 0
   let alumnoMas = ''
@@ -59,6 +59,22 @@ const obtenerMejorAlumno=(alumnado:Alumno[]):string=>{
   }
   return alumnoMas
 }
+
+//obtener la media global
+const mediaGlobal=(alumnado:Alumno[]):string=>{
+const notas = obtenerNombreV2(alumnado)
+let suma = 0
+let cantidad= 0
+  for (alumno of alumnado){
+    for(nota of alumno.notas){
+      suma+=nota
+      cantidad++
+
+    }
+  }
+  return suma / cantidad
+}
+
 //-------Inicializar el ejercicio-----------
 console.log("El nombre de los alumnos es: ")
 console.log(obtenerNombreV2(alumnado))
@@ -66,4 +82,6 @@ console.log("Las medias de las notas de los alumnos son: ")
 console.log(obtenerMedias(alumnado))
 console.log("Y el alumno con mas media es: ")
 console.log(obtenerMejorAlumno(alumnado))
+console.log("La media general es de: ")
+console.log(mediaGlobal(alumnado))
 

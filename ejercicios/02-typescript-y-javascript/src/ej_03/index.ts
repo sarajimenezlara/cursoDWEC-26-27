@@ -9,22 +9,12 @@ function resumenStock(stock: Record<string, number>): {
   total: number
   sinStock: number
 } {
-  let total = 0
-  let sinStock = 0
-
-  for (const clave in stock) {
-    if (Object.hasOwn(stock, clave)) {
-      total += stock[clave]
-      stock[clave] === 0 ? sinStock++ : null
-    }
-  }
-
-  return { total, sinStock }
+  
 }
 
 export function ejercicio03(): void {
-  console.log('Stock:', stock)
-  console.log(resumenStock(stock))
-  console.log('Caso {}:', resumenStock({}))
-  console.log('Caso { a: 0, b: 0 }:', resumenStock({ a: 0, b: 0 }))
+  console.log('Stock:',)
+  console.log()
+  console.log('Caso {}:', )
+  console.log('Caso { a: 0, b: 0 }:', )
 }
