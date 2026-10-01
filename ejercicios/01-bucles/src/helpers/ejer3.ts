@@ -34,7 +34,7 @@ return alumnos.map((alumno)=> alumno.nombre)
 const obtenerNombreV2=(alumnos: Alumno[])=> alumnos.map((alumno)=>alumno.nombre)
 
 //Obten las medias de todos los alumnos(solo la media)
-const obtenerNombres=(alumnado:Alumno[]):number[]=>{
+const obtenerMedias=(alumnado:Alumno[]):number[]=>{
   const medias: number[]= []
   for(const notas of alumnado){
     let suma = 0
@@ -45,7 +45,25 @@ const obtenerNombres=(alumnado:Alumno[]):number[]=>{
   }
   return medias
 }
+//Obtener el alumno con mejor media
+const obtenerMejorAlumno=(alumnado:Alumno[]):string=>{
+  let mediaAlta = 0
+  let alumnoMas = ''
+  const medias = obtenerMedias(alumnado)
+  const nombres = obtenerNombreV2(alumnado)
+  for(let i=0;i< medias.length; i++){
+    if(mediaAlta<medias[i]){
+      mediaAlta=medias[i]
+      alumnoMas=nombres[i]
+    }
+  }
+  return alumnoMas
+}
 //-------Inicializar el ejercicio-----------
 console.log("El nombre de los alumnos es: ")
 console.log(obtenerNombreV2(alumnado))
+console.log("Las medias de las notas de los alumnos son: ")
+console.log(obtenerMedias(alumnado))
+console.log("Y el alumno con mas media es: ")
+console.log(obtenerMejorAlumno(alumnado))
 
