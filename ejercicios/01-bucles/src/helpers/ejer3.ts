@@ -33,6 +33,19 @@ return alumnos.map((alumno)=> alumno.nombre)
 }
 const obtenerNombreV2=(alumnos: Alumno[])=> alumnos.map((alumno)=>alumno.nombre)
 
+//Obten las medias de todos los alumnos(solo la media)
+const obtenerNombres=(alumnado:Alumno[]):number[]=>{
+  const medias: number[]= []
+  for(const notas of alumnado){
+    let suma = 0
+    for(const nota of notas.notas){
+      suma += nota
+    }
+    medias.push(suma/notas.notas.length)
+  }
+  return medias
+}
 //-------Inicializar el ejercicio-----------
 console.log("El nombre de los alumnos es: ")
-console.log(obtenerNombres(alumnado))
+console.log(obtenerNombreV2(alumnado))
+
