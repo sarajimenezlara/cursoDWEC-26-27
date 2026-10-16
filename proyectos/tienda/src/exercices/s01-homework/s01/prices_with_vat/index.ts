@@ -9,5 +9,6 @@ import type { Product } from "../../../types/product";
 //Recibe una lista de productos y promete devolver una lista de numeros con el precio incluyendo al IVA
 const vat = 0.21
 export function pricesWithVat(myProducts: Product[]): number[] {
-  myProducts.map(product => Math.round(product.price * (1 + vat)))
+  return myProducts.map(product => Math.round(product.price * (1 + vat)))
 }
+
