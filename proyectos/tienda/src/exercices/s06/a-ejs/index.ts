@@ -19,3 +19,15 @@ export function firstRepeated(votes: string[]): string | undefined {
   }
   return undefined
 }
+
+//A-3 canciones en las dos playlists
+export function inBoth(a: string[], b: string[]): string[] {
+  const bSet = new Set(b)
+  const set = new Set<string>()
+  for (const canA of a) {
+    if (bSet.has(canA)) {
+      set.add(canA)
+    }
+  }
+  return [...set]
+}
