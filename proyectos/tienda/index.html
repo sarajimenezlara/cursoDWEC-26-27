@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tienda</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tienda</title>
+</head>
+
+<body>
+  <section class="controls">
+    <input id="search" type="search" placeholder="Buscar un producto" />
+    <label>
+      <input id="only-in-stock" type="checkbox" />
+      Solo en stock
+    </label>
+    <button id="btn-clicks" type="button">Clicks: 0</button>
+  </section>
+  <ul id="list" class="list"></ul>
+  <script type="module" src="/src/exercices/s07/dom/index.ts"></script>
+</body>
+
 </html>
